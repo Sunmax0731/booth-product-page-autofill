@@ -1,0 +1,66 @@
+# Chrome Web Store Listing Draft
+
+## Name
+
+BOOTH Product Page Autofill
+
+## Short Description
+
+Fill BOOTH item edit pages from a Markdown product draft and image files.
+
+## Detailed Description
+
+BOOTH Product Page Autofill helps shop owners prepare BOOTH item edit pages from a local Markdown draft.
+
+Select or drag and drop a Markdown file and product images in the extension popup, then run autofill on a BOOTH item edit page. The extension fills the product name, product description, BOOTH paragraph blocks, and product image input.
+
+The extension is designed for creators who prepare product pages outside BOOTH first, then want to reduce repetitive copy and paste work during editing.
+
+Features:
+
+- Read `.md`, `.markdown`, or `.txt` product page drafts
+- Drag and drop Markdown and image files into the popup
+- Fill BOOTH item name
+- Fill the main product description
+- Fill BOOTH paragraph title and body fields
+- Add missing BOOTH paragraph blocks when possible
+- Fill product image input from selected image files
+- Keep tags, price, category, variation, product files, and publication settings manual
+
+Privacy:
+
+This extension processes selected files locally in the browser and does not send Markdown files, images, or BOOTH page contents to external servers.
+
+## Category
+
+Productivity
+
+## Language
+
+Japanese, English
+
+## Permission Justification
+
+### activeTab
+
+Used to run autofill only on the BOOTH item edit page that the user is currently viewing.
+
+### scripting
+
+Used to inject the autofill script into the current BOOTH item edit page after the user clicks the extension button.
+
+### Host permission: `https://manage.booth.pm/items/*/edit`
+
+Used to limit autofill access to BOOTH item edit pages.
+
+## Privacy Practice Notes
+
+Suggested dashboard disclosure:
+
+- The extension handles website content on BOOTH edit pages only to fill form fields.
+- The extension handles user-selected files locally only to parse Markdown and set image inputs.
+- The extension does not collect, transmit, sell, or share user data.
+
+Privacy policy URL:
+
+https://github.com/Sunmax0731/booth-product-page-autofill/blob/main/docs/privacy-policy.md

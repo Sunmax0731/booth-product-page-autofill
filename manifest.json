@@ -1,8 +1,14 @@
 {
   "manifest_version": 3,
   "name": "BOOTH Product Page Autofill",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Fill BOOTH item edit pages from a Markdown product page draft and product image files.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "permissions": [
     "activeTab",
     "scripting"
@@ -12,6 +18,12 @@
   ],
   "action": {
     "default_title": "BOOTH Autofill",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   }
 }
