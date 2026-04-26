@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOOTH Autofill</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>BOOTH Autofill</h1>
+        <p>商品紹介 Markdown と商品画像から、BOOTH 商品編集ページの商品名・紹介文・画像を入力します。</p>
+      </header>
+
+      <section id="dropZone" class="drop-zone">
+        <div class="drop-help">
+          <strong>Markdown と画像をここへドロップ</strong>
+          <span>または下のボタンから選択</span>
+        </div>
+
+        <label class="field">
+          <span>商品紹介 Markdown</span>
+          <input id="markdownFile" type="file" accept=".md,.markdown,.txt,text/markdown,text/plain">
+        </label>
+
+        <label class="field">
+          <span>商品画像</span>
+          <input id="imageFiles" type="file" accept="image/*" multiple>
+        </label>
+      </section>
+
+      <section class="preview" aria-live="polite">
+        <dl>
+          <div>
+            <dt>商品名</dt>
+            <dd id="previewTitle">未選択</dd>
+          </div>
+          <div>
+            <dt>画像</dt>
+            <dd id="previewImages">0 件</dd>
+          </div>
+          <div>
+            <dt>紹介文</dt>
+            <dd id="previewBlocks">0 ブロック</dd>
+          </div>
+        </dl>
+      </section>
+
+      <label class="checkbox">
+        <input id="autoSave" type="checkbox">
+        <span>入力後に保存ボタンを押す</span>
+      </label>
+
+      <button id="fillButton" type="button" disabled>現在の BOOTH 編集ページへ入力</button>
+
+      <output id="status" role="status"></output>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

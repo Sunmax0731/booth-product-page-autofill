@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "BOOTH Product Page Autofill",
+  "version": "0.2.1",
+  "description": "Fill BOOTH item edit pages from a Markdown product page draft and product image files.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://manage.booth.pm/items/*/edit"
+  ],
+  "action": {
+    "default_title": "BOOTH Autofill",
+    "default_popup": "popup.html"
+  }
+}

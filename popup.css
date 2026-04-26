@@ -1,0 +1,162 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+main {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.drop-zone {
+  display: grid;
+  gap: 12px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 12px;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.drop-zone.drag-over {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.drop-help {
+  display: grid;
+  gap: 2px;
+  color: #334155;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.drop-help span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+input[type="file"] {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.preview {
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px;
+}
+
+dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+dl div {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 8px;
+}
+
+dt {
+  color: #64748b;
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+  font-weight: 700;
+  color: white;
+  background: #2563eb;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: #94a3b8;
+  background: #e2e8f0;
+  cursor: not-allowed;
+}
+
+output {
+  min-height: 20px;
+  color: #0f766e;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+output.error {
+  color: #b91c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e5e7eb;
+    background: #111827;
+  }
+
+  p,
+  dt,
+  .drop-help span {
+    color: #9ca3af;
+  }
+
+  .preview,
+  .drop-zone {
+    border-color: #374151;
+    background: #1f2937;
+  }
+
+  .drop-zone.drag-over {
+    border-color: #60a5fa;
+    background: #172554;
+  }
+
+  .drop-help {
+    color: #e5e7eb;
+  }
+}
